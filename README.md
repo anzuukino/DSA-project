@@ -1,8 +1,8 @@
 ## Simple web-app dictionary
 For my DSA-Project, I made a simple web-app dictionary, using Flask framework.
 
+<p align="center"><b>Preview of the web-app</b></p>
 <div style="text-align:center">
-    <b>Preview of the web-app</b>
     <img src="preview.png">
 </div>
 
@@ -50,5 +50,4 @@ python3 app.py
 ## Author :
 **Ngo Phuc Duong - 23520350**
 
-##
 > **Special thanks to my teacher, Mr. Nguyen Thanh Son, for guiding me through this project.**

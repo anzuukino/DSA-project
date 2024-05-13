@@ -82,4 +82,4 @@ if __name__ == "__main__":
     Setup(triea_v, dictionarya_v)
     Setup(triev_a, dictionaryv_a)
     # print(trie.starts_with('Yu'))
-    app.run(host="0.0.0.0", port=1337, debug=True)
+    app.run(host="0.0.0.0", port=1337)
