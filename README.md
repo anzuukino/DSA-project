@@ -51,6 +51,4 @@ python3 app.py
 **Ngo Phuc Duong - 23520350**
 
 ##
-```
-*** Special thanks to my teacher, Mr. Nguyen Thanh Son, for guiding me through this project. ***
-```
+> **Special thanks to my teacher, Mr. Nguyen Thanh Son, for guiding me through this project.**
