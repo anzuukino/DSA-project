@@ -1,0 +1,162 @@
+--------------------------trietree.py-------------------------------------------------------------------
+class TrieNode(builtins.object)
+ |  TrieNode(text='', pronunciation='', definition='')
+ |
+ |  Methods defined here:
+ |
+ |  __init__(self, text='', pronunciation='', definition='')
+ |      Initialize a TrieNode object.
+ |
+ |      Args:
+ |          text (str): The text of the node, default is an empty string.
+ |          pronunciation (str): The pronunciation of the word at this node, default is an empty string.
+ |          definition (str): The definition of the word at this node, default is an empty string.      
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+ class PrefixTree(builtins.object)
+ |  Methods defined here:
+ |
+ |  __init__(self)
+ |      Initialize a PrefixTree object.
+ |
+ |  child_words(self, node, words)
+ |      Get all words from a node in the trie tree.
+ |
+ |      Args:
+ |          node (TrieNode): The starting node.
+ |          words (list): The list to collect words.
+ |
+ |      Returns:
+ |          None
+ |
+ |  find(self, word)
+ |      Find a word in the trie tree.
+ |
+ |      Args:
+ |          word (str): The word to be found.
+ |
+ |      Returns:
+ |          tuple: A tuple containing the word, its pronunciation, and its definition.
+ |                 If the word is not found, returns ("Not found", "", "").
+ |
+ |  insert(self, word, pronunciation, definition)
+ |      Insert a word into the trie tree.
+ |
+ |      Args:
+ |          word (str): The word to be inserted.
+ |          pronunciation (str): The pronunciation of the word.
+ |          definition (str): The definition of the word.
+ |
+ |  starts_with(self, prefix)
+ |      Get all words that start with a prefix.
+ |
+ |      Args:
+ |          prefix (str): The prefix to search for.
+ |
+ |      Returns:
+ |          list: A list of words that start with the given prefix.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+--------------------------app.py---------------------------------------------------------------------
+Opendictionary(files)
+    Open a dictionary file and return its content as a dictionary object.
+
+    Args:
+        files (str): The name of the dictionary file (without extension).
+
+    Returns:
+        dict: A dictionary object containing the dictionary data.
+
+Setup(trie, dictionary)
+    Set up a trie tree from a dictionary object.
+
+    Args:
+        trie (PrefixTree): The trie tree to populate.
+        dictionary (dict): The dictionary object containing words, pronunciations, and definitions.
+
+    Returns:
+        None
+
+home()
+    Render the home page.
+
+    Returns:
+        str: The rendered HTML of the home page.
+
+search()
+    Handle search requests, using trie trees to find words.
+
+    Returns:
+        str: The rendered HTML of the search results page.
+
+suggestion()
+    Handle suggestion requests, using trie trees to suggest words.
+
+    Returns:
+        list: A list of suggested words.
+
+main function
+    Main function to initialize the dictionaries and trie trees, and run the Flask app.
+
+--------------------------makedatabase.py-------------------------------------------------------------------
+
+Opendictionary(files)
+    Open a dictionary file and return its content as a dictionary object.
+
+    Args:
+        files (str): The name of the dictionary file (without extension).
+
+    Returns:
+        dict: A dictionary object containing the dictionary data.
+
+get_pronunciation(dictionary_word)
+    Extract the pronunciation from the dictionary entry.
+
+    Args:
+        dictionary_word (str): A string representing a dictionary entry.
+
+    Returns:
+        str: The pronunciation extracted from the dictionary entry, or an empty string if not found.
+
+get_definition(dictionary_word)
+    Extract the definition from the dictionary entry.
+
+    Args:
+        dictionary_word (str): A string representing a dictionary entry.
+
+    Returns:
+        str: The definition extracted from the dictionary entry.
+
+analyze(dictionary_word)
+    Analyze the dictionary entry and return a dictionary object.
+
+    Args:
+        dictionary_word (str): A string representing a dictionary entry.
+
+    Returns:
+        dict: A dictionary containing the word, pronunciation, and definition.
+
+create_database(content)
+    Create a list of dictionary objects from the dictionary content.
+
+    Args:
+        content (str): A string representing the entire content of the dictionary file.
+
+    Returns:
+        list: A list of dictionaries, each containing the word, pronunciation, and definition.

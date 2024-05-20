@@ -1,9 +1,12 @@
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jacquard+12&family=Paytone+One&display=swap');
+
 body, .msg-container {
     font-family: "Paytone One", sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: url("../images/background.jpg") no-repeat center center fixed;
 }
 * {
   margin: 0;
@@ -30,7 +33,7 @@ input {
   font-family: 'Inter', sans-serif;
   font-size: calc(.6rem + .4vw);
   color: var(--color-text);
-  background: var(--color-background);
+  
   font-weight: 300;
   padding: 0 calc(var(--size-bezel) * 3);
 }
@@ -206,4 +209,8 @@ html {
 }
 .header__navbar-item-strong{
   font-weight: 900;
+}
+.dictionary_name {
+  font-family: "Jacquard 12" !important;
+  font-size: 4rem;
 }
