@@ -59,10 +59,10 @@ def search():
         str: The rendered HTML of the search results page.
     """
     if request.method == "POST":
-        txt = request.form["txt"]
+        txt = request.form["txt"].strip()
         translation_option = request.form["translation_option"]
     elif request.method == "GET":
-        txt = request.args.get("txt")
+        txt = request.args.get("txt").strip()
         translation_option = request.args.get("translation_option")
 
     if translation_option == "anh-viet":
@@ -90,7 +90,7 @@ def suggestion():
     Returns:
         list: A list of suggested words.
     """
-    word = request.args.get("word").lower()
+    word = request.args.get("word").lower().strip()
     translation_option = request.args.get("translation_option")
     if translation_option == "anh-viet":
         data = triea_v.starts_with(word)
